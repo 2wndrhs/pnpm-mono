@@ -1,4 +1,4 @@
-import Counter from "shared-ui/Counter";
+import Counter from "@2wndrhs/shared-ui/Counter";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";

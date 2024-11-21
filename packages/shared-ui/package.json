@@ -1,7 +1,6 @@
 {
-  "name": "shared-ui",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@2wndrhs/shared-ui",
+  "version": "1.0.0",
   "type": "module",
   "description": "",
   "main": "dist/index.js",
@@ -9,7 +8,7 @@
     "build": "rm -rf dist && tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "2wndrhs@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "react": "^17.0.0",
