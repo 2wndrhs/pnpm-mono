@@ -53,12 +53,15 @@ importers:
       vite:
         specifier: ^5.4.10
         version: 5.4.11
+    dependenciesMeta:
+      '@2wndrhs/shared-ui':
+        injected: true
 
   apps/react-18-app:
     dependencies:
       '@2wndrhs/shared-ui':
         specifier: workspace:^
-        version: link:../../packages/shared-ui
+        version: file:packages/shared-ui(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -99,52 +102,9 @@ importers:
       vite:
         specifier: ^5.4.10
         version: 5.4.11
-
-  apps/react-app:
-    dependencies:
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      shared-ui:
-        specifier: workspace:^
-        version: link:../../packages/shared-ui
-    devDependencies:
-      '@eslint/js':
-        specifier: ^9.13.0
-        version: 9.15.0
-      '@types/react':
-        specifier: ^18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: ^18.3.1
-        version: 18.3.1
-      '@vitejs/plugin-react':
-        specifier: ^4.3.3
-        version: 4.3.3(vite@5.4.11)
-      eslint:
-        specifier: ^9.13.0
-        version: 9.15.0
-      eslint-plugin-react-hooks:
-        specifier: ^5.0.0
-        version: 5.0.0(eslint@9.15.0)
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.14
-        version: 0.4.14(eslint@9.15.0)
-      globals:
-        specifier: ^15.11.0
-        version: 15.12.0
-      typescript:
-        specifier: ~5.6.2
-        version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.11.0
-        version: 8.15.0(eslint@9.15.0)(typescript@5.6.3)
-      vite:
-        specifier: ^5.4.10
-        version: 5.4.11
+    dependenciesMeta:
+      '@2wndrhs/shared-ui':
+        injected: true
 
   packages/shared-ui:
     devDependencies:
@@ -159,6 +119,11 @@ importers:
         version: 5.6.3
 
 packages:
+
+  '@2wndrhs/shared-ui@file:packages/shared-ui':
+    resolution: {directory: packages/shared-ui, type: directory}
+    peerDependencies:
+      react: ^18.0.0 || ^17.0.0
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1192,6 +1157,10 @@ packages:
     engines: {node: '>=10'}
 
 snapshots:
+
+  '@2wndrhs/shared-ui@file:packages/shared-ui(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
 
   '@ampproject/remapping@2.3.0':
     dependencies:
